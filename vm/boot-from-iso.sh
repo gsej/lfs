@@ -1,7 +1,7 @@
 qemu-system-x86_64 \
   -m 2048 \
   -boot order=d \
-  -cdrom arch_modified.iso \
+  -cdrom arch.iso \
   -drive file=hdd.img,format=raw \
   -drive if=pflash,format=raw,readonly=on,file=/usr/share/OVMF/x64/OVMF_CODE.4m.fd \
   -drive if=pflash,format=raw,file=OVMF_VARS.4m.fd \
