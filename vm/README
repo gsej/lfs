@@ -1,0 +1,40 @@
+
+
+Requirements:
+
+edk2
+
+xorriso
+syslinux
+
+archiso
+
+
+
+
+
+
+
+
+# create hard disk
+./create-disk.sh
+
+# refresh OVMF_VARS.4m.fd
+
+./refresh-ovmf-vars.sh
+
+
+./boot-from-cd.sh
+
+
+after install 
+
+to mount the scripts folder in the vm:
+mkdir /mnt/shared
+mount -t 9p -o trans=virtio host0 /mnt/shared
+
+run ./setup.sh
+
+after this finishes and chroots, run ./scripts/setup2.sh
+
+power off and then start with: ./boot.sh

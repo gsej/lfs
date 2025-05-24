@@ -1,0 +1,1 @@
+mkarchiso -v ./releng -o ..
